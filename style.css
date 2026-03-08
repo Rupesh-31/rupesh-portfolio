@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+ nav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 99px;
+    padding: 1%;
+    border-radius: 11px;
+    overflow: hidden;
+    background-color: mediumspringgreen;
+    position: fixed; 
+    top: 0;
+}
+
+ nav >  a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: black;
+    transition: all .7s ease-in-out;
+    padding: 7px;
+    border-radius: 8px;
+}
+nav > a:hover{
+    background-color: black;
+    color: springgreen;
+}
+.common{
+    height: 100vh;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 9% ;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 199px;
+    background-color: black;
+    color: white;
+}
+.common > h1{
+    border: 1px solid silver;
+    padding: 1%;
+    border-radius: 11px;
+    box-shadow: 2px 7px 2px springgreen;
+    margin-top: 7%; 
+    width: 20%;
+    font-family:  'Lucida Handwriting', cursive;;
+}
+
+#fix > div> h3,h1,p{
+    text-align: center;
+}
+
+#home > div > h3{
+    animation: dance 4s ease-in-out  infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+@keyframes dance {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 27ch;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+#home > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7%;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    border: 2px solid silver;
+    background-color: transparent;
+}
+ #homebox > div > a{
+     display: inline; 
+     background-color: springgreen; 
+     color: black; 
+     border-radius: 4px; 
+     padding: 7px; 
+     text-decoration: none; 
+     box-shadow: 4px 4px 2px white;
+}
+ #homebox > div > p{
+     background-color: springgreen; 
+     color: black; 
+     border-radius: 4px; 
+     padding: 9px; 
+     text-decoration: none; 
+     box-shadow: 4px 4px 2px white;
+}
+#homebox > div > a:hover{
+    background-color: rgba(0, 255, 128, 0.699);
+}
+#aboutbox{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7%;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    /* border: 2px solid silver; */
+    background-color: transparent;
+}
+
+#techbox{
+    height: 60%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6%;
+   
+}
+#techbox> div{
+    border: 1px solid silver;
+    background-color: white;
+    box-shadow: 8px 8px 3px silver;
+    color: black;
+    border-radius: 19px;
+    height: 70%;
+    width: 20%;
+    transition: all 1s ease;
+}
+#techbox > div:hover{
+    transform: scale(.7);
+}
+#toolsbox{
+    height: 60%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 6%;
+}
+#toolsbox> div{
+    background-color: white;
+    color: black;
+    border: 1px solid silver;
+    box-shadow: 8px 8px 3px silver;
+    border-radius: 19px;
+    height: 70%;
+    width: 20%;
+    transition: all 1s ease;
+}
+#toolsbox > div:hover{
+    transform: scale(.7);
+}
+#projectbox{
+    height: 100%;
+    width: 100%;
+    border: 2px solid silver;
+    background-color: transparent;
+    overflow: auto;
+    border-radius: 9px;
+}
+
+#loader{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    visibility:hidden;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+    border:6px solid white;
+    border-top:6px solid springgreen;
+    border-radius:50%;
+    animation: spin 1s linear infinite;
+}
+
+#loader p{
+    color:springgreen;
+    margin-top:15px;
+    font-size:20px;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+#topBtn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: springgreen;
+    color: black;
+    border: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px white;
+}
+
+#topBtn:hover{
+    background-color: white;
+}
+@media (max-width:1024px){
+
+    nav{
+        gap:30px;
+        justify-content:center;
+    }
+    
+    .common{
+        width:95%;
+        margin-left:2.5%;
+    }
+    
+    .common > h1{
+        width:35%;
+    }
+    
+    #techbox{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
+    #techbox > div{
+        width:40%;
+        margin-bottom:20px;
+    }
+    
+    #toolsbox{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
+    #toolsbox > div{
+        width:40%;
+        margin-bottom:20px;
+    }
+    
+    #homebox div{
+        width:70% !important;
+    }
+    
+    }
+
+    @media (max-width:768px){
+
+        nav{
+            gap:10px;
+            font-size:12px;
+            padding:5px;
+        }
+        
+        .common{
+            height:auto;
+            padding-bottom:40px;
+        }
+        
+        .common > h1{
+            width:60%;
+            font-size:20px;
+        }
+        
+        #homebox h1{
+            font-size:45px !important;
+        }
+        
+        #homebox h3{
+            font-size:25px !important;
+        }
+        
+        #homebox p{
+            font-size:16px !important;
+            padding:10px;
+        }
+        
+        #homebox div{
+            width:90% !important;
+            flex-direction:column;
+        }
+        
+        #techbox{
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        #techbox > div{
+            width:80%;
+        }
+        
+        #toolsbox{
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        #toolsbox > div{
+            width:80%;
+        }
+        
+        #projectbox{
+            padding:15px;
+        }
+        
+        #projectbox p{
+            font-size:16px !important;
+        }
+        
+        }
+
+        @media (max-width:480px){
+
+            nav{
+                flex-wrap:wrap;
+                gap:5px;
+            }
+            
+            nav a{
+                font-size:11px;
+            }
+            
+            #homebox h1{
+                font-size:35px !important;
+            }
+            
+            #homebox h3{
+                font-size:20px !important;
+            }
+            
+            #topBtn{
+                bottom:20px;
+                right:20px;
+            }
+            
+            }
